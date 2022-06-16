@@ -926,27 +926,34 @@ img {
         justify-content: center;
 }
 
-.checkbox {
-        appearance: none;
-}
-
 .checkbox__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-right: 8px;
         width: 16px;
         height: 15px;
         border: 2px solid var(--secondary-text-color);
-        border-radius: 2px;
-        box-sizing: content-box;
+        border-radius: 3px;
+
+        transition: background-color 250ms var(--timing-func);
 }
 
 .checkbox__svg {
         width: 100%;
         height: 100%;
+        fill: transparent;
+
+        transition: fill 250ms var(--timing-func);
 }
 
 .checkbox:checked + .checkbox__icon {
         border: none;
         background-color: var(--secondary-color);
+}
+
+.checkbox:checked + .checkbox__icon .checkbox__svg {
+        fill: var(--primary-color);
 }
 
 .modal__link {
