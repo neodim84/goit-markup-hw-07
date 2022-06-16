@@ -2,7 +2,7 @@
     --primary-text-color: #757575;
     --secondary-text-color: #212121;
     --primary-color: #FFFFFF;
-    --secondary-color: #2196F3;
+    --accent-color: #2196F3;
     --hover-color: #188CE8;
     --primary-bgc: #2F303A;
     --secondary-bgc: #F5F4FA;
@@ -30,12 +30,14 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, h5, h6, p {
         margin: 0;
 }
 
 img {
         display: block;
+        max-width: 100%;
+        height: auto;
 }
 
 .container {
@@ -44,12 +46,29 @@ img {
         padding: 0 15px;
 }
 
+.section {
+        padding: 94px 0;
+}
+
+.visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+
 /* Стили шапки */
 
 .logo {
         margin-right: 93px;
 
-        color: var(--secondary-color);
+        color: var(--accent-color);
 
         font-family: 'Raleway';
         font-weight: 700;
@@ -87,7 +106,7 @@ img {
 .nav__link:hover,
 .nav__link:focus,
 .active__link {
-        color: var(--secondary-color);
+        color: var(--accent-color);
 }
 
 .active__link {
@@ -102,7 +121,7 @@ img {
         width: 100%;
         height: 4px;
         border-radius: 2px;
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
 }
 
 .active__link:hover::after,
@@ -151,7 +170,7 @@ img {
 
 .cont__link:hover,
 .cont__link:focus {
-        color: var(--secondary-color);
+        color: var(--accent-color);
 }
 .cont__link:hover .cont__icon,
 .cont__link:focus .cont__icon {
@@ -201,7 +220,7 @@ img {
         padding: 10px 32px;
 
         color: var(--primary-color);
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
         border: none;
         border-radius: 4px;
         
@@ -221,23 +240,6 @@ img {
 }
 
 /* Стили особенностей работы */
-
-.section {
-        padding: 94px 0;
-}
-
-.visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-}
 
 .feature__list {
         display: flex;
@@ -406,7 +408,7 @@ img {
 
 .social__link:hover,
 .social__link:focus {
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
 }
 
 .social__link:hover .social__icon,
@@ -456,7 +458,7 @@ img {
 
 .client__link:hover .client__icon,
 .client__link:focus .client__icon {
-        fill: var(--secondary-color);
+        fill: var(--accent-color);
 }
 
 /* Стили подвала */
@@ -475,7 +477,7 @@ img {
         display: block;
         margin-bottom: 20px;
 
-        color: var(--secondary-color);
+        color: var(--accent-color);
 
         font-family: 'Raleway';
         font-weight: 700;
@@ -508,7 +510,7 @@ img {
 
 .cont-foot__link:hover,
 .cont-foot__link:focus {
-        color: var(--secondary-color);
+        color: var(--accent-color);
 }
 
 .social-foot__cont {
@@ -559,7 +561,7 @@ img {
 
 .social-foot__link:hover,
 .social-foot__link:focus {
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
 }
 
 .mailing__cont {
@@ -588,7 +590,7 @@ img {
 
 .mailing__input:hover,
 .mailing__input:focus {
-        border: 1px solid var(--secondary-color);
+        border: 1px solid var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         outline: none;
 }
@@ -600,10 +602,11 @@ img {
         align-items: center;
 
         color: var(--primary-color);
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
         border: none;
         border-radius: 4px;
 
+        font-family: inherit;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
@@ -662,7 +665,7 @@ img {
 .filter__btn:hover,
 .filter__btn:focus {
         color: var(--primary-color);
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -812,9 +815,13 @@ img {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.close__icon {
+        transition: fill 250ms var(--timing-func);
+}
+
 .close__btn:hover .close__icon,
 .close__btn:focus .close__icon {
-        fill: var(--secondary-color);
+        fill: var(--accent-color);
 }
 
 .modal__form {
@@ -858,7 +865,7 @@ img {
 
 .modal__input:hover,
 .modal__input:focus {
-        border: 1px solid var(--secondary-color);
+        border: 1px solid var(--accent-color);
         outline: none;
 }
 
@@ -879,7 +886,7 @@ img {
 
 .modal__input:hover + .modal__icon,
 .modal__input:focus + .modal__icon {
-        fill: var(--secondary-color);
+        fill: var(--accent-color);
 }
 
 .modal__comment {
@@ -904,7 +911,7 @@ img {
 
 .modal__area:hover,
 .modal__area:focus {
-        border: 1px solid var(--secondary-color);
+        border: 1px solid var(--accent-color);
         outline: none;
 }
 
@@ -936,7 +943,7 @@ img {
         border: 2px solid var(--secondary-text-color);
         border-radius: 3px;
 
-        transition: background-color 250ms var(--timing-func);
+        transition: background-color 250ms var(--timing-func), border 250ms var(--timing-func);
 }
 
 .checkbox__svg {
@@ -947,9 +954,12 @@ img {
         transition: fill 250ms var(--timing-func);
 }
 
+.checkbox:focus + .checkbox__icon {
+        border: 2px solid var(--accent-color);
+}
 .checkbox:checked + .checkbox__icon {
         border: none;
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
 }
 
 .checkbox:checked + .checkbox__icon .checkbox__svg {
@@ -958,7 +968,7 @@ img {
 
 .modal__link {
         padding-left: 4px;
-        color: var(--secondary-color);
+        color: var(--accent-color);
         text-decoration: underline;
 }
 
@@ -966,17 +976,18 @@ img {
         padding: 10px 55px;
         margin: 0 auto;
 
-        text-align: center;
-
-        background-color: var(--secondary-color);
+        background-color: var(--accent-color);
         color: var(--primary-color);
         border: none;
         border-radius: 4px;
 
+        font-family: inherit;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
         letter-spacing: 0.06em;
+        text-align: center;
+        cursor: pointer;
 
         transition: background-color 250ms var(--timing-func), box-shadow 250ms var(--timing-func);
 }

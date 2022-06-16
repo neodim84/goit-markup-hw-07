@@ -1,0 +1,247 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+:root {
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --primary-color: #ffffff;
+  --accent-color: #2196f3;
+  --hover-color: #188ce8;
+  --primary-bgc: #2f303a;
+  --secondary-bgc: #f5f4fa;
+  --sprite-color: #afb1b8;
+  --sprite-bgc: rgba(255, 255, 255, 0.1);
+  --timing-func: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  color: var(--accent-color);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  word-spacing: -0.24em;
+}
+
+.logo {
+  margin-right: 93px;
+}
+
+.logo-end {
+  color: #000000;
+}
+
+.page-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__link {
+  display: block;
+  padding: 32px 0;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms var(--timing-func);
+  transition: color 250ms var(--timing-func);
+}
+
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
+}
+
+.active__link {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.active__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.active__link:hover::after, .active__link:focus::after {
+  -webkit-animation: scaleline 250ms var(--timing-func);
+          animation: scaleline 250ms var(--timing-func);
+}
+
+@-webkit-keyframes scaleline {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleline {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.nav__list .nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.cont__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.cont__icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  -webkit-transition: fill 250ms var(--timing-func);
+  transition: fill 250ms var(--timing-func);
+}
+
+.cont__link:hover .cont__icon,
+.cont__link:focus .cont__icon {
+  fill: currentColor;
+}
+
+.cont__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms var(--timing-func);
+  transition: color 250ms var(--timing-func);
+}
+
+.cont__link:hover, .cont__link:focus {
+  color: var(--accent-color);
+}
+
+.cont__list .cont__item:not(last-child) {
+  margin-right: 50px;
+}
+
+.header__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-header {
+  border-bottom: 1px solid #ECECEC;
+}
+/*# sourceMappingURL=main.css.map */
