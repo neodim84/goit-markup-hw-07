@@ -1,11 +1,9 @@
-.logo {
-    @extend %baselogo;
-
+.logo-header {
     margin-right: 93px;
 }
 
 .logo-end {
-    color: #000000;
+    @include textcolor(#000000);
 }
 
 .page-nav {

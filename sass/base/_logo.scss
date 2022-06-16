@@ -1,4 +1,4 @@
-%baselogo {
+.logo {
     color: var(--accent-color);
 
     font-family: 'Raleway';
@@ -6,4 +6,8 @@
     font-size: 26px;
     line-height: 1.19;
     word-spacing: -0.24em;
+}
+
+@mixin textcolor {
+    color: currentColor;
 }
